@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <!-- zou - extension settings -->
-  <Import Project="..\..\..\..\..\..\..\zou\Cpp.Boot.props" />
+  <Import Project="..\..\..\..\..\..\zou\Cpp.Boot.props" />
   <PropertyGroup Label="Globals">
     <DoNotUseBoost>true</DoNotUseBoost>
     <VCProjectVersion>16.0</VCProjectVersion>
