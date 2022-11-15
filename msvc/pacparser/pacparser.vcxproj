@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{cac15a49-3b52-4600-807b-2fdba19b5dec}</ProjectGuid>
+    <RootNamespace>msvc</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>pacparser</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;_IEEE_LIBM;EXPORT_JS_API;WIN32;_WINDOWS;XP_WIN;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(TargetDir);$(SolutionDir)..\src\spidermonkey\js\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;_IEEE_LIBM;EXPORT_JS_API;WIN32;_WINDOWS;XP_WIN;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(TargetDir);$(SolutionDir)..\src\spidermonkey\js\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;_IEEE_LIBM;EXPORT_JS_API;WIN32;_WINDOWS;XP_WIN;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <PrecompiledHeaderFile />
+      <AdditionalIncludeDirectories>$(TargetDir);$(SolutionDir)..\src\spidermonkey\js\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;_IEEE_LIBM;EXPORT_JS_API;WIN32;_WINDOWS;XP_WIN;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(TargetDir);$(SolutionDir)..\src\spidermonkey\js\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\pacparser.h" />
+    <ClInclude Include="..\..\src\pac_utils.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsapi.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsarena.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsarray.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsatom.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsbit.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsbool.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsclist.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jscntxt.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jscompat.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsconfig.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jscpucfg.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsdate.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsdbgapi.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsdhash.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsdtoa.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsemit.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsexn.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsfun.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsgc.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jshash.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsinterp.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsiter.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jslock.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jslong.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsmath.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsnum.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsobj.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsopcode.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsosdep.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsotypes.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsparse.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsprf.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsprvtd.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jspubtd.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsregexp.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsscan.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsscope.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsscript.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsstddef.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsstr.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jstypes.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsutil.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsxdrapi.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\jsxml.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\prmjtime.h" />
+    <ClInclude Include="..\..\src\spidermonkey\js\src\resource.h" />
+    <CustomBuild Include="jsautokw.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(TargetDir)jskwgen.exe &gt; $(TargetDir)jsautokw.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(TargetDir)jskwgen.exe &gt; $(TargetDir)jsautokw.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(TargetDir)jskwgen.exe &gt; $(TargetDir)jsautokw.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(TargetDir)jskwgen.exe &gt; $(TargetDir)jsautokw.h</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(TargetDir)jsautokw.h</Outputs>
+      <OutputItemType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ClInclude</OutputItemType>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(TargetDir)jsautokw.h</Outputs>
+      <OutputItemType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ClInclude</OutputItemType>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(TargetDir)jsautokw.h</Outputs>
+      <OutputItemType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ClInclude</OutputItemType>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(TargetDir)jsautokw.h</Outputs>
+      <OutputItemType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ClInclude</OutputItemType>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\pacparser.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsapi.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsarena.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsarray.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsatom.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsbool.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jscntxt.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jscpucfg.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsdate.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsdbgapi.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsdhash.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsdtoa.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsemit.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsexn.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsfun.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsgc.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jshash.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsinterp.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsiter.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jslock.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jslog2.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jslong.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsmath.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsnum.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsobj.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsopcode.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsparse.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsprf.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsregexp.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsscan.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsscope.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsscript.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsstr.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsutil.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsxdrapi.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\jsxml.c" />
+    <ClCompile Include="..\..\src\spidermonkey\js\src\prmjtime.c">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">windows.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">windows.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">windows.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">windows.h</ForcedIncludeFiles>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;_LIB;_IEEE_LIBM;EXPORT_JS_API;WIN32;_WINDOWS;XP_WIN;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions);WIN32_LEAN_AND_MEAN</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;_LIB;_IEEE_LIBM;EXPORT_JS_API;WIN32;_WINDOWS;XP_WIN;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions);WIN32_LEAN_AND_MEAN</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">_DEBUG;_LIB;_IEEE_LIBM;EXPORT_JS_API;WIN32;_WINDOWS;XP_WIN;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions);WIN32_LEAN_AND_MEAN</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NDEBUG;_LIB;_IEEE_LIBM;EXPORT_JS_API;WIN32;_WINDOWS;XP_WIN;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions);WIN32_LEAN_AND_MEAN</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
