@@ -284,4 +284,7 @@
       <Filter>Source Files\pacparser</Filter>
     </CustomBuild>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
 </Project>
