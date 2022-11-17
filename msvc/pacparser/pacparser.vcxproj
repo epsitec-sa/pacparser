@@ -86,6 +86,7 @@
       </PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(TargetDir);$(ProjectDir)..\..\src\spidermonkey\js\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <FunctionLevelLinking>false</FunctionLevelLinking>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -119,6 +120,7 @@
       </PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(TargetDir);$(ProjectDir)..\..\src\spidermonkey\js\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <FunctionLevelLinking>false</FunctionLevelLinking>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
     </ClCompile>
     <Link>
       <SubSystem>
