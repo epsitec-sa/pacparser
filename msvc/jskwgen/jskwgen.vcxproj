@@ -61,6 +61,18 @@
     <Import Project="$(ZouDir)Cpp.Standard.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$([MSBuild]::EnsureTrailingSlash('$(ObjDir)'))</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$([MSBuild]::EnsureTrailingSlash('$(ObjDir)'))</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$([MSBuild]::EnsureTrailingSlash('$(ObjDir)'))</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$([MSBuild]::EnsureTrailingSlash('$(ObjDir)'))</OutDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <SDLCheck>false</SDLCheck>

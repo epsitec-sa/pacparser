@@ -19,6 +19,9 @@
     <Filter Include="Source Files\pacparser">
       <UniqueIdentifier>{1f419e48-847a-4925-9abd-2d8093ee78da}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Custom Build">
+      <UniqueIdentifier>{3d93ac48-0b23-47f7-96ac-0789b9eee522}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\spidermonkey\js\src\jsapi.h">
@@ -280,11 +283,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="jsautokw.h">
-      <Filter>Source Files\pacparser</Filter>
-    </CustomBuild>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <CustomBuild Include="jsautokw.h">
+      <Filter>Custom Build</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>
