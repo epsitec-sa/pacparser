@@ -21,7 +21,6 @@
   <!-- zou - extension settings -->
   <Import Project="..\..\..\..\..\..\zou\Cpp.Boot.props" />
   <PropertyGroup Label="Globals">
-    <DoNotUseBoost>true</DoNotUseBoost>
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{f480fce6-d1eb-4c54-b886-e76780f5852a}</ProjectGuid>
