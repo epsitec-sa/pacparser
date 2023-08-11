@@ -86,6 +86,7 @@
       <AdditionalIncludeDirectories>$(ObjDir);$(ProjectDir)..\..\src\spidermonkey\js\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <FunctionLevelLinking>false</FunctionLevelLinking>
       <WholeProgramOptimization>false</WholeProgramOptimization>
+      <DisableSpecificWarnings>4267;4047;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>
